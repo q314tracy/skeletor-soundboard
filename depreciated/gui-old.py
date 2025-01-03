@@ -8,9 +8,6 @@ class mainwindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        #get the current directory
-        current_dir = os.getcwd() + r'\sounds'
-
         #main window
         self.setWindowTitle("Skeletor Soundboard")
         self.setGeometry(500, 500, 1000, 500)
@@ -39,7 +36,7 @@ class mainwindow(QMainWindow):
         self.cabbage_button = QPushButton("Cabbage", self)
         self.cabbage_button.setGeometry(10, 260, 200, 50)
         self.cabbage_button.clicked.connect(self.cabbage)
-    
+
     #functions for playing sounds
     def wimp_scientist(self):
         playsound.playsound(os.getcwd() + r'\sounds\wimp_scientist.mp3')
